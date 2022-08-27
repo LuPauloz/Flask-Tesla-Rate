@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalie seu serviço</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="../static/Tesla-Logo.png" alt="Tesla" class="logo">
+        {% if message %}
+            <p class="message">{{ message | safe }}</p>
+        {% endif %}
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <H3>Nome do comprador</H3>
+                <input type="text" name="customer" placeholder="Nome do dono do veiculo" required>
+            </div>
+            <div class="form-group">
+                <h3>Vendedor</h3>
+                <select name="dealer" required>
+                    <option value="">Seleciona um vendedor</option>
+                    <option value="Thomas Shelby">Thomas Shelby</option>
+                    <option value="Saul Goodman">Saul Goodman</option>
+                    <option value="Don Draper">Don Draper</option>
+                    <option value="Harvey Specter">Harvey Specter</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>Avalie o vendedor</h3>
+                <input type="radio" name="rating" value="1"> 1
+                <input type="radio" name="rating" value="2"> 2
+                <input type="radio" name="rating" value="3"> 3
+                <input type="radio" name="rating" value="4"> 4
+                <input type="radio" name="rating" value="5"> 5
+                <input type="radio" name="rating" value="6"> 6
+                <input type="radio" name="rating" value="7"> 7
+                <input type="radio" name="rating" value="8"> 8
+                <input type="radio" name="rating" value="9"> 9
+                <input type="radio" name="rating" value="10" checked> 10
+            </div>
+            <div class="form-group">
+                <h3>Deixa um comentario</h3>
+                <textarea name="comments" id="" cols="30" rows="10" placeholder="Nos conte a sua experiencia, o que gostou ou não gostou"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Enviar" class="btn">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

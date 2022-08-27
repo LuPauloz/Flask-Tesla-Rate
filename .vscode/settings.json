@@ -1,0 +1,13 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=C0111",
+        "--load-plugins",
+        "pylint_flask_sqlalchemy, pylint_flask",
+        "--init-hook"
+    ],
+    "python.linting.mypyEnabled": false,
+    "python.linting.flake8Enabled": false,
+    "python.linting.banditEnabled": false
+}
